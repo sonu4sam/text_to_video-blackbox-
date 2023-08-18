@@ -19,7 +19,7 @@ No third-party ...
 
 ```python
 """
-openapi: 3.0.0
+openapi: 3.0.0 to be discussed we can use orca/ viccuna / llama but / for  Regex parsing and nlp simplification. 
 ...
 description: A JSON object ...
 """
@@ -61,4 +61,4 @@ No shared knowledge ...
 
 ## Anything UNCLEAR:
 
-clarifications
+clarifications --> to be continued. 
