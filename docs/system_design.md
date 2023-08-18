@@ -1,7 +1,7 @@
 ## Implementation approach:
 For the text to video application, we can utilize the following open-source frameworks and libraries:
 
-1. OpenAI GPT-3: We can use the OpenAI GPT-3 model for generating high-quality videos based on the text input. GPT-3 is a state-of-the-art language model that can generate human-like text and can be fine-tuned for specific tasks.
+1. OpenAI GPT-3: We can use the OpenAI GPT-3 model for generating high-quality videos based on the text input. We can use gpt-3.5-16k with max token(up for discussion my alternatives are viccuna, llamma, Orca )
 
 2. MoviePy: MoviePy is a Python library for video editing and video effects. We can use MoviePy to add video styles and effects to the generated videos. It provides a wide range of features for video editing, including trimming, cropping, and adding text overlays.
 
@@ -96,4 +96,5 @@ sequenceDiagram
 ```
 
 ## Anything UNCLEAR:
-The requirement is clear to me.
+
+The requirement is clear to me. Furthur clarifications: --> To be continued 
