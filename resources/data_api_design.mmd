@@ -1,0 +1,30 @@
+classDiagram
+    class TextToVideoApp{
+        +generate_video(text: str) -> str
+        +customize_video(style: str, effects: List[str]) -> None
+        +add_audio(audio_file: str) -> None
+        +preview_video() -> None
+        +edit_video() -> None
+        +export_video(format: str) -> None
+    }
+    class VideoGenerator{
+        +generate_video(text: str) -> str
+    }
+    class VideoEditor{
+        +customize_video(style: str, effects: List[str]) -> None
+        +preview_video() -> None
+        +edit_video() -> None
+        +export_video(format: str) -> None
+    }
+    class AudioProcessor{
+        +add_audio(audio_file: str) -> None
+    }
+    class FlaskApp{
+        +route(url: str) -> None
+        +render_template(template: str) -> None
+        +request() -> None
+    }
+    TextToVideoApp "1" -- "1" VideoGenerator: has
+    TextToVideoApp "1" -- "1" VideoEditor: has
+    TextToVideoApp "1" -- "1" AudioProcessor: has
+    FlaskApp "1" -- "1" TextToVideoApp: has

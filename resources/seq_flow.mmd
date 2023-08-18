@@ -1,0 +1,27 @@
+sequenceDiagram
+    participant M as Main
+    participant F as FlaskApp
+    participant T as TextToVideoApp
+    participant V as VideoGenerator
+    participant E as VideoEditor
+    participant A as AudioProcessor
+    M->>F: Start FlaskApp
+    F->>T: Create TextToVideoApp instance
+    F->>V: Create VideoGenerator instance
+    F->>E: Create VideoEditor instance
+    F->>A: Create AudioProcessor instance
+    F->>T: generate_video(text)
+    T->>V: generate_video(text)
+    V-->>T: video_file
+    T->>E: customize_video(style, effects)
+    E->>T: video_file
+    T->>A: add_audio(audio_file)
+    A-->>T: audio_file
+    T->>E: preview_video()
+    E-->>T: None
+    T->>E: edit_video()
+    E-->>T: None
+    T->>E: export_video(format)
+    E-->>T: None
+    T-->>F: video_file
+    F->>M: Return video_file

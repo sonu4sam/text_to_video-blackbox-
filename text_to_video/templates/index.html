@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Video Application</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Text to Video Application</h1>
+    <form action="/generate_video" method="POST">
+        <label for="text">Enter Text:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Generate Video">
+    </form>
+    <form action="/customize_video" method="POST">
+        <label for="style">Select Video Style:</label><br>
+        <select id="style" name="style">
+            <option value="style1">Style 1</option>
+            <option value="style2">Style 2</option>
+            <option value="style3">Style 3</option>
+        </select><br>
+        <label for="effects">Select Video Effects:</label><br>
+        <input type="checkbox" id="effect1" name="effects" value="effect1">
+        <label for="effect1">Effect 1</label><br>
+        <input type="checkbox" id="effect2" name="effects" value="effect2">
+        <label for="effect2">Effect 2</label><br>
+        <input type="checkbox" id="effect3" name="effects" value="effect3">
+        <label for="effect3">Effect 3</label><br>
+        <input type="submit" value="Customize Video">
+    </form>
+    <form action="/add_audio" method="POST" enctype="multipart/form-data">
+        <label for="audio">Add Audio:</label><br>
+        <input type="file" id="audio" name="audio"><br>
+        <input type="submit" value="Add Audio">
+    </form>
+    <form action="/preview_video">
+        <input type="submit" value="Preview Video">
+    </form>
+    <form action="/edit_video">
+        <input type="submit" value="Edit Video">
+    </form>
+    <form action="/export_video" method="POST">
+        <label for="format">Export Video Format:</label><br>
+        <select id="format" name="format">
+            <option value="mp4">MP4</option>
+            <option value="avi">AVI</option>
+            <option value="mov">MOV</option>
+        </select><br>
+        <input type="submit" value="Export Video">
+    </form>
+</body>
+</html>
