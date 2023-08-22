@@ -25,3 +25,5 @@ class VideoEditor:
         # Placeholder code to simulate video export
         exported_video = f"exported_{video_path}"
         return exported_video
+    
+    # next methods 
