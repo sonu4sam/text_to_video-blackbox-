@@ -27,3 +27,4 @@ class VideoEditor:
         return exported_video
     
     # next methods 
+    @fixture.
